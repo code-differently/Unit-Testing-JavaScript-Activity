@@ -10,7 +10,7 @@
 // | getCurrentBalance(): number |
 
 //Testing Suite
-// Balance -- returns a number
+// Balance -- returns a number -- same test as the last one getCurrentBalance :)
 // Apply interest rate to the balance interest rate -- returns a number
 // withdraw -- returns a number  balance - interest
 // withdraw -- do I have enough balance to make a withdraw returns true or false
