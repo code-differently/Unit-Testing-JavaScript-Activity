@@ -31,9 +31,13 @@ describe('ATM', function () {
         let myAccount = new ATM(100.00);
         expect(myAccount.interestRate()).to.equal(10);
     })
-    it("should pass a number and return a number", function () {
+    it("should pass a number and return a boolean enough balance to withdraw", function () {
         let myAccount = new ATM(100.00);
-        expect(myAccount.withdraw(25.00)).to.equal(75.00); 
+        expect(myAccount.withdraw(25.00)).to.be.true; 
+    })
+    it("should pass a number and return a boolean not enough balance to withdraw", function () {
+        let myAccount = new ATM(100.00);
+        expect(myAccount.withdraw(125.00)).to.be.false; 
     })
     it("returns a number -- return deposit + balance", function () {
         let myAccount = new ATM(100.00);
