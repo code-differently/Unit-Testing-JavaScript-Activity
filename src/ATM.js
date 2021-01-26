@@ -30,11 +30,14 @@ class ATM{
         let currentRate = 10;
         return currentRate;
     }
-
     withdraw(amount){
+        if (amount < this.amount){
         this.amount = this.amount - amount;
-        return this.amount;
-        
+        return true;
+        }
+        else {
+            return false;
+        }      
     }
     deposit(amount) {
         this.amount = this.amount + amount;
@@ -42,14 +45,7 @@ class ATM{
     }
     applyInterest() {
         let rate = this.interestRate()/100;
-        
-         console.log("this.interestRate = " + this.interestRate);
-         console.log("this.interestRate/100 = " + this.interestRate/100);
-
         let rateApplied = this.amount + (this.amount * rate);
-
-        console.log("let rateApplied = amount + amount * rate" + this.amount + (this.amount * rate));
-        console.log("rateApplied = " + rateApplied);
         return rateApplied;
     }
 
