@@ -16,9 +16,9 @@ describe('ATM', () => {
         expect(myATM.getCurrentBalance()).to.equal(1000);
     } );
     it('should allow deposit', () => {
-        const myATM = new ATM(3000);
+        const myATM = new ATM(1000);
         const depositAmount = myATM.deposit(2000);
-        expect(depositAmount).to.equal(2000);
-        expect(myATM.getCurrentBalance()).to.equal(5000);
+        expect(depositAmount).to.equal(3000);
+        expect(myATM.getCurrentBalance()).to.equal(3000);
     } );
 }); 

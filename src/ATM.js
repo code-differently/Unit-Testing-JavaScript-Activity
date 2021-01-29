@@ -14,8 +14,8 @@ class ATM {
     }
     deposit(amountTodeposit){
 
-        this.amount = this.amount + amountTodeposit;
-        //check if you've overdrafted
+       return this.amount =  amountTodeposit + this.amount;
+      
        
        }
 }
